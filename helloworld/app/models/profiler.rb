@@ -1,0 +1,2 @@
+class Profiler < ApplicationRecord
+end
