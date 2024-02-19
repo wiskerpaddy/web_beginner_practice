@@ -9,6 +9,6 @@
 #   end
 
 # coding: utf-8
-Profile.create(:name => '太郎', :age => '20', :url => 'taro.html')
-Profile.create(:name => '次郎', :age => '15', :url => 'jiro.html')
-Profile.create(:name => '三郎', :age => '10', :url => 'saburou.html')
+Profile.create(:name => '太郎', :age => '20', :url => 'taro')
+Profile.create(:name => '次郎', :age => '15', :url => 'jiro')
+Profile.create(:name => '三郎', :age => '10', :url => 'saburo')

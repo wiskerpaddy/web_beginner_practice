@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :users
   get 'users/index' => 'users'
+  get '/users/:url', to: 'users#show'
   get 'users/show'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
