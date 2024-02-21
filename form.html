@@ -1,0 +1,61 @@
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <!--getフォーム-->
+    <form action="/form_get" method="get">
+        <ul>
+            <li>GETで送る</li>
+            <li>
+                <label for="usr_name">ユーザー名</label>
+                <input type="text" id="get_name" name="user_name" />
+            </li>
+            <li>
+                <label for="ag">年齢</label>
+                <input type="number" id="get_age" name="age" />
+            </li>
+            <!--ボタン-->
+            <button type="submit">送信</button>
+        </ul>
+    </form>
+    <!--postフォーム-->
+    <form action="/form_post" method="post">
+        <ul>
+            <li>POSTで送る</li>
+            <li>
+                <label for="usr_name">ユーザー名</label>
+                <input type="text" id="post_name" name="user_name" />
+            </li>
+            <li>
+                <label for="ag">年齢</label>
+                <input type="number" id="post_age" name="age" />
+            </li>
+            <!--ボタン-->
+            <!--li class="button"-->
+            <button type="submit">送信</button>
+            <!--/li-->
+        </ul>
+    </form>
+</body>
+<style>
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    input:focus,input::selection{
+        /* フォーカスのある要素を強調する */
+        border-color: blue;
+    }
+
+    textarea {
+        /* 複数行のテキストフィールドをラベルに揃える */
+        vertical-align: top;
+
+        /* テキスト入力に十分な空間を与える */
+        height: 5em;
+    }
+</style>
+</html>
