@@ -6,17 +6,35 @@
         <h1>Foods一覧</h1>
         <form action="/foods" method="get">
             <ul>
-                <li>
-                    <select name="food_list" id="food_list" value="全て" >
-                        <!--rubyからデータもらう-->
-                        <option value="all">全て</option>
-                        <% @foods.each do |food| %>
-                        <option value="food"><%= food[:name]%></option>
-                        <% end %>
-                    </select>
-                    <input type="submit" value="検索" id="submit" name="submit" />
-                </li>
+                <select name="food_list" id="food_list" value="全て" >
+                    <% if @list_selected_name=="all" then%>
+                        <option value="all" name="all" selected>全て</option>
+                        <option value="fruits" name="fruits">フルーツ</option>
+                        <option value="vegetables" name="vegetables">野菜</option>
 
+                    <% elsif @list_selected_name=="fruits" then%>
+                        <option value="all" name="all">全て</option>
+                        <option value="fruits" name="fruits" selected>フルーツ</option>
+                        <option value="vegetables" name="vegetables">野菜</option>
+
+                    <% elsif @list_selected_name=="vegetables" then%>
+                        <option value="all" name="all">全て</option>
+                        <option value="fruits" name="fruits">フルーツ</option>
+                        <option value="vegetables" name="vegetables" selected>野菜</option>
+                    
+                    <% else%>
+                        <option value="all" name="all">全て</option>
+                        <option value="fruits" name="fruits">フルーツ</option>
+                        <option value="vegetables" name="vegetables">野菜</option>
+
+                    <% end %>
+                </select>
+                <input type="submit" value="検索" id="submit" name="submit" method="get"/>
+            </ul>
+            <ul>
+                <% @foods.each do |food| %>
+                <li><%= food[:name]%></li>
+                <% end %>
             </ul>
         </form>
     </body>
